@@ -1,0 +1,51 @@
+ - Instalar git hub para windows
+ - Acessar site e fazer log in no github.com
+ - fazer o login git bash:
+   git config --global user.name "valterblande"
+   git config --global user.email "valterblande@gmail.com"
+   conferir com "git config --list"
+ - Gerar ssh key com o comando: ssh-keygen -t ed25519 -C "your_email@example.com"
+ - Ir na plataforma github e em setting cadastrar a ssh gerada
+ - Criar o primeiro projeto
+   criar um repositório na plataforma
+   no git bash entrar com o comando na pasta de interesse: git init (primeira vez)
+   git add . (adiciona arquivos em local intermediario)
+   git commit -m "comentario"
+   git branch -M main
+   git remote add origin git@github.com:valterblande/repositoriocriado.git
+   git push -u origin main (primeira vez)
+   
+   Depois de criado o primeiro repositório:
+   - Após fazer alterações e desejar criar versão
+	git add . ou git add nomearquivo
+	git commit -m "comentario sobre a ver."
+	git push 
+        usar git status para verificar status atual
+   - Para fazer um clone no computador novo
+	git clone git@github.com:valterblande/repositorio.git (vai descer o repositorio inteiro)
+	se quiser somente uma versao:
+	git reset --hard ssh da versao
+   - Para navegar entre as versoes
+	git checkout ssh (ver pelo git log)
+	git chechout main (volta para a principal atual)
+	git chechout HEAD~1 volta uma versao
+	git chechout HEAD~2 volta duas versoes anteriores
+	É importante nao fazer alterações fora da versao main. Somente verificar
+   - Voltar a modificações salvas e não enviadas para versionamento
+	git reset (se mandou para stage via git add .)
+	git clean -df
+	git checkout -- .
+   - Desfazer o último commit para incluir mais coisas e incluir na versao
+	git reset --soft HEAD~1 (desfaz commit sem apagar arquivos)
+	git reset --hard HEAD~1 (desfaz commit e apaga arquivos)
+	Ao inves do HEAD pode-se usar o ssh do commit
+   - Forçar atualização do historico remoto com o local
+	git push -f 
+   - Trocar de repositorio
+	git remote set-url origin git@github.com:valterblande/novoRepo (troca add por set-url)
+	Para verificar o atual repositorio: git remote -v
+	Após trocar de repositório deve fazer o primeiro push com -u origin main (git push -u origin main)
+
+
+
+   
