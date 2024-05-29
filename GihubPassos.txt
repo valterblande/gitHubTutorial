@@ -1,4 +1,4 @@
- - Instalar git hub para windows
+﻿ - Instalar git hub para windows
  - Acessar site e fazer log in no github.com
  - fazer o login git bash:
    git config --global user.name "valterblande"
@@ -45,6 +45,13 @@
 	git remote set-url origin git@github.com:valterblande/novoRepo (troca add por set-url)
 	Para verificar o atual repositorio: git remote -v
 	Após trocar de repositório deve fazer o primeiro push com -u origin main (git push -u origin main)
+   - Criar Branchs novos (usado para criar novos ramos)
+	git brach -c "nome da branch"
+	git checkout "nome da branch criada"
+	git add .  na branch nova
+	git commit -m "Comentario do commit"
+	git push origin head
+
 
 
 
